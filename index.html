@@ -4,7 +4,7 @@
     <title>&lt;model-viewer&gt; template</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
@@ -16,6 +16,7 @@
       ar-modes="webxr scene-viewer quick-look" 
       camera-controls poster="poster.webp" 
       shadow-intensity="1" 
+      shadow-softness = 0 
       autoplay>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
