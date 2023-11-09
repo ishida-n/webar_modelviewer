@@ -1,4 +1,7 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
+
+const modelViewerScale = document.querySelector("model-viewer#scale");
+
 const onProgress = (event) => {
   const progressBar = event.target.querySelector('.progress-bar');
   const updatingBar = event.target.querySelector('.update-bar');
@@ -10,4 +13,10 @@ const onProgress = (event) => {
     progressBar.classList.remove('hide');
   }
 };
+
+const updateScale = () => {
+  modelViewerScale.scale = 0.5,0.5,0.5;
+  modelViewerScale.updateFraming();
+};
+
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
